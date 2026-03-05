@@ -4,8 +4,7 @@ import (
 	"fmt"
 )
 
-// day2.go demonstrates basic Go concepts such as functions,
-// slices, maps, loops, and simple error handling.
+// day2.go: Demonstrate Go basics and common control statements.
 func main() {
 	fmt.Println("Welcome to Go Day 2!")
 
@@ -27,7 +26,42 @@ func main() {
 		fmt.Printf("%s: %s\n", k, v)
 	}
 
-	// Calling a function
+	// Control statements examples
+
+	// if-else
+	if a > 5 {
+		fmt.Println("a is greater than 5")
+	} else if a == 5 {
+		fmt.Println("a is equal to 5")
+	} else {
+		fmt.Println("a is less than 5")
+	}
+
+	// switch-case
+	day := 3
+	switch day {
+	case 1:
+		fmt.Println("Monday")
+	case 2:
+		fmt.Println("Tuesday")
+	case 3:
+		fmt.Println("Wednesday")
+	default:
+		fmt.Println("Another day")
+	}
+
+	// for loop with continue and break
+	for i := 0; i < 5; i++ {
+		if i == 2 {
+			continue // skip this iteration
+		}
+		if i == 4 {
+			break // exit loop early
+		}
+		fmt.Println("for i=", i)
+	}
+
+	// Calling a simple function
 	result := add(a, int(b))
 	fmt.Println("add(a,b) =", result)
 
